@@ -1,5 +1,17 @@
 import { StoreState } from '../reducers';
 
+export const selectFilterValue = (
+	state: StoreState,
+) => (
+	state.filter.value
+);
+
+export const selectFilterType = (
+	state: StoreState,
+) => (
+	state.filter.type
+);
+
 export const selectFilteredPetsIds = (
 	state: StoreState,
 ) => {

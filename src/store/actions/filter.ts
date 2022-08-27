@@ -12,3 +12,7 @@ export const setType = createAction(
 )<{
 	type: string,
 }>();
+
+export const reset = createAction(
+	constants.FILTER.RESET,
+)<{}>();

@@ -7,4 +7,5 @@ export const PETS = {
 export const FILTER = {
 	SET_VALUE: "@filter/set-value" as const,
 	SET_TYPE: "@filter/set-type" as const,
+	RESET: "@filter/reset" as const,
 }

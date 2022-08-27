@@ -2,8 +2,17 @@ import React from 'react';
 import './PetsDirectorySection.scss';
 import Button from '../../ui/Button';
 import CircleButton from '../../ui/CircleButton';
+import { useDispatch } from 'react-redux';
+import * as actions from '../../store/actions';
 
 const PetsDirectorySection = () => {
+	const dispatch = useDispatch();
+	
+	const handleOnSeeAllClick = React.useCallback(() => {
+		dispatch(
+			actions.filter.reset({})
+		)
+	}, [])
 	
 	return (
 		<section className="PetsDirectorySection">
@@ -20,14 +29,14 @@ const PetsDirectorySection = () => {
 					</p>
 					<div className="PetsDirectorySection-article-button--main">
 						<Button
-							onClick={() => {}}
+							onClick={handleOnSeeAllClick}
 							color="primary"
 						>
 							See all
 						</Button>
 					</div>
 					<div className="PetsDirectorySection-article-button--small">
-						<CircleButton onClick={() => {}} />
+						<CircleButton onClick={handleOnSeeAllClick} />
 					</div>
 				</div>
 			</article>

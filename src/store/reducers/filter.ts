@@ -4,11 +4,12 @@ import { Pet } from '../../api/pets';
 
 type ReducerState = {
 	value: string;
-	type?: string;
+	type: string;
 }
 
 const initialState: ReducerState = {
 	value: '',
+	type: '',
 }
 
 const reducer = (
@@ -16,6 +17,7 @@ const reducer = (
 	action:
 		| ReturnType<typeof actions.filter.setValue>
 		| ReturnType<typeof actions.filter.setType>
+		| ReturnType<typeof actions.filter.reset>
 ): ReducerState => {
 	switch (action.type) {
 		case constants.FILTER.SET_VALUE: {
@@ -41,6 +43,9 @@ const reducer = (
 				...state,
 				type,
 			}
+		}
+		case constants.FILTER.RESET: {
+			return initialState;
 		}
 	}
 	return state

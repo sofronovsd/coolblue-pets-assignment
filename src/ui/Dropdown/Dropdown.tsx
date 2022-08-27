@@ -10,11 +10,13 @@ type DropdownProps = {
 	options: string[];
 	onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 	title: string;
+	value: string;
 }
 
 const Dropdown = (props: DropdownProps) => {
 	const {
 		title,
+		value,
 		options,
 		onChange,
 	} = props;
@@ -23,6 +25,7 @@ const Dropdown = (props: DropdownProps) => {
 		<select
 			className="Dropdown"
 			onChange={onChange}
+			value={value}
 		>
 			<option value="">{title}</option>
 			{options.map((item) => (

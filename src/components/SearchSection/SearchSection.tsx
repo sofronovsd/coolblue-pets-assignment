@@ -6,7 +6,11 @@ import {
 	useSelector,
 } from 'react-redux';
 import * as actions from '../../store/actions';
-import { selectPetTypes } from '../../store/selectors';
+import {
+	selectFilterType,
+	selectFilterValue,
+	selectPetTypes,
+} from '../../store/selectors';
 import Dropdown from '../../ui/Dropdown';
 
 const SearchSection = () => {
@@ -24,6 +28,14 @@ const SearchSection = () => {
 	
 	const petTypes = useSelector(
 		selectPetTypes,
+	);
+	
+	const filterSearchValue = useSelector(
+		selectFilterValue,
+	);
+	
+	const filterSearchType = useSelector(
+		selectFilterType,
 	);
 	
 	console.log({
@@ -51,7 +63,7 @@ const SearchSection = () => {
 			<h1 className="text-h1 SearchSection-title">Pets</h1>
 			<div className="SearchSection-input">
 				<SearchInput
-					value={searchValue}
+					value={filterSearchValue}
 					onChange={handleOnSearchValueChange}
 				/>
 			</div>
@@ -60,6 +72,7 @@ const SearchSection = () => {
 					title="Type"
 					options={petTypes}
 					onChange={handleOnSearchTypeChange}
+					value={filterSearchType}
 				/>
 			</div>
 		</section>
