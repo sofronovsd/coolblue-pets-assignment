@@ -1,6 +1,5 @@
 import React from 'react';
 import './CategoriesSection.scss';
-import '../../styles/text.scss';
 import Category from '../../ui/Category';
 
 const CategoriesSection = () => {

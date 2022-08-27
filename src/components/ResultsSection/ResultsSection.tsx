@@ -5,7 +5,6 @@ import {
 	selectPetsIds,
 } from '../../store/selectors';
 import PetCard from '../../ui/PetCard';
-import '../../styles/text.scss';
 
 const ResultsSection = () => {
 	const petsIds = useSelector(

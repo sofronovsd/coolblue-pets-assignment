@@ -3,7 +3,6 @@ import './PetCard.scss';
 import { useSelector } from 'react-redux';
 import { selectPetById } from '../../store/selectors';
 import Button from '../Button';
-import '../../styles/text.scss';
 
 type PetCardProps = {
 	id: number;

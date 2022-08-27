@@ -1,0 +1,35 @@
+@import "src/styles/colors";
+
+.PetsDirectorySection {
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 300px;
+  margin: 20px 0;
+
+  &-title {
+    color: $white;
+    margin-bottom: 10px;
+  }
+
+  &-description {
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  &-image {
+    flex: 2;
+    object-fit: cover;
+  }
+
+  &-article {
+    flex: 1;
+    background: $light-blue;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 60px 70px 60px 20px;
+    }
+  }
+}

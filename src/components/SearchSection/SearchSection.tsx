@@ -3,7 +3,6 @@ import './SearchSection.scss'
 import SearchInput from '../../ui/SearchInput';
 import { useDispatch } from 'react-redux';
 import * as actions from '../../store/actions';
-import '../../styles/text.scss';
 
 const SearchSection = () => {
 	const [searchValue, setSearchValue] = React.useState('');

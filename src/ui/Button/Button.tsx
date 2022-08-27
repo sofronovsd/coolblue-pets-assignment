@@ -21,7 +21,7 @@ const Button = (props: ButtonProps) => {
 			type="button"
 			onClick={onClick}
 		>
-			{children}
+			<span className="text-h4">{children}</span>
 		</button>
 	);
 };

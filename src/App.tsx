@@ -3,6 +3,7 @@ import './App.scss';
 import SearchSection from './components/SearchSection';
 import ResultsSection from './components/ResultsSection';
 import CategoriesSection from './components/CategoriesSection';
+import PetsDirectorySection from './components/PetsDirectorySection';
 
 function App(): JSX.Element {
 	return (
@@ -11,24 +12,12 @@ function App(): JSX.Element {
 				<img src="/icons/pet-icon.svg" alt="logo" />
 			</header>
 			<main>
-				{/* filter */}
 				<SearchSection />
-				
-				{/* results */}
 				<ResultsSection />
-				
-				{/* pets directory */}
-				<section>
-				
-				</section>
-				
-				{/* categories */}
+				<PetsDirectorySection />
 				<CategoriesSection />
-			
 			</main>
-			<footer>
-			
-			</footer>
+			<footer />
 		</div>
 	);
 }
