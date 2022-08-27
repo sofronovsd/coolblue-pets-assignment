@@ -14,7 +14,9 @@ const SearchSection = () => {
 	
 	React.useEffect(() => {
 		dispatch(
-			actions.pets.fetch({}),
+			actions.filter.setValue({
+				value: searchValue,
+			}),
 		)
 	}, [searchValue])
 	

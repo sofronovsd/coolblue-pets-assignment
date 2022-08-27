@@ -2,13 +2,13 @@ import React from 'react';
 import './ResultsSection.scss';
 import { useSelector } from 'react-redux';
 import {
-	selectPetsIds,
+	selectFilteredPetsIds,
 } from '../../store/selectors';
 import PetCard from '../../ui/PetCard';
 
 const ResultsSection = () => {
 	const petsIds = useSelector(
-		selectPetsIds,
+		selectFilteredPetsIds,
 	);
 	console.log({
 		petsIds
