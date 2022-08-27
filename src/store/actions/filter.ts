@@ -16,3 +16,9 @@ export const setType = createAction(
 export const reset = createAction(
 	constants.FILTER.RESET,
 )<{}>();
+
+export const setIsAvailable = createAction(
+	constants.FILTER.AVAILABLE,
+)<{
+	available: string,
+}>();

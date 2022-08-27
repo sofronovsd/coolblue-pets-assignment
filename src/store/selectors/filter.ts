@@ -17,10 +17,12 @@ export const selectFilteredPetsIds = (
 ) => {
 	const filterValue = state.filter.value;
 	const filterType = state.filter.type;
+	const filterAvailable = state.filter.available;
 	const pets = state.pets.data;
 	console.log({
 		filterValue,
 		filterType,
+		filterAvailable,
 		pets,
 	});
 	if (!filterValue && !filterType) return pets.map(pet => pet.id);
@@ -28,13 +30,19 @@ export const selectFilteredPetsIds = (
 		.filter(pet => {
 			let isExistByValue = true;
 			if (filterValue) {
-				isExistByValue = (pet.name.indexOf(filterValue) >= 0 || pet.species.indexOf(filterValue) >= 0)
+				isExistByValue = pet.name.indexOf(filterValue) >= 0
 			}
 			let isExistByType = true;
 			if (filterType) {
 				isExistByType = pet.species === filterType;
 			}
-			return isExistByValue && isExistByType;
+			let isExistByAvailability = true;
+			if (filterAvailable) {
+				isExistByType = pet.available === filterAvailable;
+			}
+			return isExistByValue
+				&& isExistByType
+				&& isExistByAvailability;
 		})
 		.map(pet => pet.id)
 }
