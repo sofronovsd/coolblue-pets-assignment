@@ -4,20 +4,25 @@ export const selectFilteredPetsIds = (
 	state: StoreState,
 ) => {
 	const filterValue = state.filter.value;
+	const filterType = state.filter.type;
 	const pets = state.pets.data;
 	console.log({
 		filterValue,
+		filterType,
 		pets,
 	});
-	if (!filterValue) return pets.map(pet => pet.id);
+	if (!filterValue && !filterType) return pets.map(pet => pet.id);
 	return pets
 		.filter(pet => {
-			console.log({
-				pet,
-				first: pet.name.indexOf(filterValue),
-				second: pet.species.indexOf(filterValue),
-			});
-			return (pet.name.indexOf(filterValue) >= 0 || pet.species.indexOf(filterValue) >= 0)
+			let isExistByValue = true;
+			if (filterValue) {
+				isExistByValue = (pet.name.indexOf(filterValue) >= 0 || pet.species.indexOf(filterValue) >= 0)
+			}
+			let isExistByType = true;
+			if (filterType) {
+				isExistByType = pet.species === filterType;
+			}
+			return isExistByValue && isExistByType;
 		})
 		.map(pet => pet.id)
 }

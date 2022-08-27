@@ -15,6 +15,7 @@ const reducer = (
 	state: ReducerState = initialState,
 	action:
 		| ReturnType<typeof actions.filter.setValue>
+		| ReturnType<typeof actions.filter.setType>
 ): ReducerState => {
 	switch (action.type) {
 		case constants.FILTER.SET_VALUE: {
@@ -27,6 +28,18 @@ const reducer = (
 			return {
 				...state,
 				value,
+			}
+		}
+		case constants.FILTER.SET_TYPE: {
+			const {
+				payload,
+			} = action;
+			const {
+				type,
+			} = payload;
+			return {
+				...state,
+				type,
 			}
 		}
 	}

@@ -6,3 +6,9 @@ export const setValue = createAction(
 )<{
 	value: string,
 }>();
+
+export const setType = createAction(
+	constants.FILTER.SET_TYPE,
+)<{
+	type: string,
+}>();
