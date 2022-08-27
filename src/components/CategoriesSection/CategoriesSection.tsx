@@ -11,6 +11,9 @@ const CategoriesSection = () => {
 		dispatch(
 			actions.filter.reset({})
 		)
+		
+		const scrollingElement = document.getElementsByClassName('SearchSection')[0];
+		scrollingElement.scrollIntoView();
 	}, [])
 	
 	const handleOnAvailableNowClick = React.useCallback(() => {
@@ -19,6 +22,9 @@ const CategoriesSection = () => {
 				available: 'Yes',
 			})
 		)
+		
+		const scrollingElement = document.getElementsByClassName('SearchSection')[0];
+		scrollingElement.scrollIntoView();
 	}, [])
 	
 	return (

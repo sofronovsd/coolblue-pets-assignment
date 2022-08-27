@@ -12,6 +12,8 @@ const PetsDirectorySection = () => {
 		dispatch(
 			actions.filter.reset({})
 		)
+		const scrollingElement = document.getElementsByClassName('SearchSection')[0];
+		scrollingElement.scrollIntoView();
 	}, [])
 	
 	return (

@@ -11,5 +11,10 @@
 
     overflow-y: hidden;
     max-height: 224px;
+
+    @media screen and (max-width: 768px) {
+      max-height: 234px;
+      padding-bottom: 10px;
+    }
   }
 }

@@ -8,14 +8,23 @@
   }
 
   &-pets {
-    display: grid;
-    grid-gap: 40px;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    gap: 40px;
+    flex-flow: nowrap;
+
+    overflow-y: hidden;
+    overflow-x: auto;
+    max-height: 412px;
+    padding-bottom: 20px;
 
     @media screen and (max-width: 768px) {
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: 1fr;
+      flex-direction: column;
+      flex-flow: wrap;
+
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-bottom: 0;
+      padding-right: 10px;
     }
   }
 }

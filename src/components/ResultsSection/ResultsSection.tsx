@@ -10,17 +10,12 @@ const ResultsSection = () => {
 	const petsIds = useSelector(
 		selectFilteredPetsIds,
 	);
-	console.log({
-		petsIds
-	});
-	
-	const ids = petsIds.slice(0, 3);
 	
 	return (
 		<section className="ResultsSection">
 			<h2 className="text-h2 ResultsSection-title">Results</h2>
 			<div className="ResultsSection-pets">
-				{ids.map(petId => (
+				{petsIds.map(petId => (
 					<PetCard
 						key={petId}
 						id={petId}

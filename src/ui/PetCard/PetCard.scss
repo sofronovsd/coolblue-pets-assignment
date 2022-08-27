@@ -1,17 +1,17 @@
 .PetCard {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   text-align: left;
 
   @media screen and (max-width: 768px) {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    width: 100%;
   }
 
   &-photo {
-    width: 100%;
+    width: 330px;
     height: 300px;
     object-fit: fill;
     border-radius: 10px;

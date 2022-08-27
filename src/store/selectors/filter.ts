@@ -25,7 +25,10 @@ export const selectFilteredPetsIds = (
 		filterAvailable,
 		pets,
 	});
-	if (!filterValue && !filterType) return pets.map(pet => pet.id);
+	if (!filterValue
+		&& !filterType
+		&& !filterAvailable
+	) return pets.map(pet => pet.id);
 	return pets
 		.filter(pet => {
 			let isExistByValue = true;
@@ -40,6 +43,12 @@ export const selectFilteredPetsIds = (
 			if (filterAvailable) {
 				isExistByType = pet.available === filterAvailable;
 			}
+			console.log({
+				isExistByValue,
+				isExistByType,
+				isExistByAvailability,
+				pet
+			});
 			return isExistByValue
 				&& isExistByType
 				&& isExistByAvailability;
