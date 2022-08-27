@@ -8,5 +8,8 @@
     grid-gap: 20px;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(5, 1fr);
+
+    overflow-y: hidden;
+    max-height: 224px;
   }
 }

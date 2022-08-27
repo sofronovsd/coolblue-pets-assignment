@@ -7,29 +7,76 @@
   height: 300px;
   margin: 20px 0;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    border-radius: 0;
+    margin: 0 -20px;
+    height: 200px;
+  }
+
   &-title {
     color: $white;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 0;
+    }
   }
 
   &-description {
     color: $white;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &-image {
     flex: 2;
     object-fit: cover;
+
+    @media screen and (max-width: 768px) {
+      flex: none;
+      height: 150px;
+    }
   }
 
   &-article {
     flex: 1;
     background: $light-blue;
 
+    @media screen and (max-width: 768px) {
+      height: 50px;
+      flex: none;
+    }
+
     &-wrapper {
       display: flex;
       flex-direction: column;
       padding: 60px 70px 60px 20px;
+
+      @media screen and (max-width: 768px) {
+        padding: 10px 20px 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    &-button {
+      &--main {
+        display: block;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+      &--small {
+        display: none;
+        @media screen and (max-width: 768px) {
+          display: block;
+        }
+      }
     }
   }
 }

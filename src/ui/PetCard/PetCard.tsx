@@ -3,6 +3,7 @@ import './PetCard.scss';
 import { useSelector } from 'react-redux';
 import { selectPetById } from '../../store/selectors';
 import Button from '../Button';
+import CircleButton from '../CircleButton';
 
 type PetCardProps = {
 	id: number;
@@ -26,14 +27,17 @@ const PetCard = (props: PetCardProps) => {
 				src={pet.photo}
 				alt="pet-photo"
 			/>
-			<span className="text">{pet.name}</span>
-			<div className="PetCard-buttons">
+			<span className="text PetCard-name">{pet.name}</span>
+			<div className="PetCard-buttons--main">
 				<Button
 					color="secondary"
 					onClick={() => {}}
 				>
 					View
 				</Button>
+			</div>
+			<div className="PetCard-buttons--small">
+				<CircleButton onClick={() => {}} />
 			</div>
 		</article>
 	);

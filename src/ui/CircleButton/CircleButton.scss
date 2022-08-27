@@ -1,0 +1,23 @@
+@import "src/styles/colors";
+
+.CircleButton {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background: $light-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-icon {
+    svg {
+      color: white;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}

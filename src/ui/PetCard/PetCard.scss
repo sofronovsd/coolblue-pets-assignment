@@ -2,6 +2,13 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  text-align: left;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 
   &-photo {
     width: 100%;
@@ -9,10 +16,37 @@
     object-fit: fill;
     border-radius: 10px;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 5px;
+      margin-right: 10px;
+      width: 120px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+
+  &-name {
+    @media screen and (max-width: 768px) {
+      flex: 1;
+    }
   }
 
   &-buttons {
-    margin-top: 10px;
-    width: 50%;
+    &--main {
+      margin-top: 10px;
+      width: 50%;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    &--small {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
   }
 }

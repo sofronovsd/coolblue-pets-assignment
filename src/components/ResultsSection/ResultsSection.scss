@@ -12,5 +12,10 @@
     grid-gap: 40px;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 768px) {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: 1fr;
+    }
   }
 }
