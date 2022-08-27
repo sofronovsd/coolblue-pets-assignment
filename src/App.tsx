@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.scss';
-import SectionTitle from './ui/SectionTitle';
 import SearchSection from './components/SearchSection';
 import ResultsSection from './components/ResultsSection';
+import CategoriesSection from './components/CategoriesSection';
 
 function App(): JSX.Element {
 	return (
 		<div className="container">
 			<header>
-				<img src="icons/pet-icon.svg" alt="logo" />
+				<img src="/icons/pet-icon.svg" alt="logo" />
 			</header>
 			<main>
 				{/* filter */}
@@ -23,10 +23,7 @@ function App(): JSX.Element {
 				</section>
 				
 				{/* categories */}
-				<section>
-					<SectionTitle>Categories</SectionTitle>
-				
-				</section>
+				<CategoriesSection />
 			
 			</main>
 			<footer>
