@@ -21,11 +21,13 @@ const SearchSection = () => {
 	
 	return (
 		<section className="SearchSection">
-			<h1 className="text-h1">Pets</h1>
-			<SearchInput
-				value={searchValue}
-				onChange={handleOnChange}
-			/>
+			<h1 className="text-h1 SearchSection-title">Pets</h1>
+			<div className="SearchSection-input">
+				<SearchInput
+					value={searchValue}
+					onChange={handleOnChange}
+				/>
+			</div>
 		</section>
 	);
 };

@@ -1,4 +1,12 @@
 .SearchSection {
   display: flex;
   flex-direction: column;
+
+  &-title {
+    margin-bottom: 20px;
+  }
+
+  &-input {
+    width: 60%;
+  }
 }

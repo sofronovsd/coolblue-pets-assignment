@@ -13,12 +13,20 @@ const SearchInput = (props: SearchInputProps) => {
 	} = props;
 	
 	return (
-		<input
-			type="text"
-			className="SearchInput"
-			value={value}
-			onChange={onChange}
-		/>
+		<div>
+			<img
+				src="/icons/search.svg"
+				className="SearchInput-icon"
+				alt="search-icon"
+			/>
+			<input
+				type="search"
+				className="SearchInput"
+				placeholder="Search for pets"
+				value={value}
+				onChange={onChange}
+			/>
+		</div>
 	);
 };
 

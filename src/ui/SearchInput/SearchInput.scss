@@ -1,3 +1,26 @@
-.SearchInput {
+@import "src/styles/colors";
 
+.SearchInput {
+  height: 50px;
+  border-radius: 25px;
+  border: $grey 1px solid;
+  padding: 15px 15px 15px 55px;
+  width: 100%;
+
+  &:focus {
+    border: $dark-blue 1px solid;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $dark-grey;
+    font-weight: bold;
+  }
+
+  &-icon {
+    position: absolute;
+    margin: 15px 15px 15px 20px;
+    width: 20px;
+    height: 20px;
+  }
 }
