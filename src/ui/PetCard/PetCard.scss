@@ -1,0 +1,18 @@
+.PetCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  &-buttons {
+    margin-top: 10px;
+    width: 50%;
+  }
+}

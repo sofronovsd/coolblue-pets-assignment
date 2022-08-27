@@ -1,0 +1,24 @@
+@import "src/styles/colors";
+
+.Button {
+  border-radius: 25px;
+  height: 50px;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+
+  &--primary {
+    background: $white;
+    color: $light-blue;
+  }
+
+  &--secondary {
+    background: $light-blue;
+    color: $white;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
