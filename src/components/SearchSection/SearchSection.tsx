@@ -38,10 +38,6 @@ const SearchSection = () => {
 		selectFilterType,
 	);
 	
-	console.log({
-		petTypes,
-	});
-	
 	React.useEffect(() => {
 		dispatch(
 			actions.filter.setValue({

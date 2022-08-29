@@ -9,9 +9,7 @@ import {
 export function* petsFetch() {
 	try {
 		const result: FetchPetsResponse = yield call(fetchPetsApi);
-		console.log({
-			result
-		});
+		
 		const {
 			pets,
 		} = result;

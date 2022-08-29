@@ -19,12 +19,6 @@ export const selectFilteredPetsIds = (
 	const filterType = state.filter.type;
 	const filterAvailable = state.filter.available;
 	const pets = state.pets.data;
-	console.log({
-		filterValue,
-		filterType,
-		filterAvailable,
-		pets,
-	});
 	if (!filterValue
 		&& !filterType
 		&& !filterAvailable
@@ -43,12 +37,6 @@ export const selectFilteredPetsIds = (
 			if (filterAvailable) {
 				isExistByType = pet.available === filterAvailable;
 			}
-			console.log({
-				isExistByValue,
-				isExistByType,
-				isExistByAvailability,
-				pet
-			});
 			return isExistByValue
 				&& isExistByType
 				&& isExistByAvailability;
